@@ -1,9 +1,0 @@
-- if brick.image.thumb.present?
-  .control-group
-    %label.control-label= t('.image_preview')
-    .controls
-      = link_to brick.image.max_width.url do
-        = image_tag brick.image.thumb
-= form.input :image, :as => :file, :input_html => { :class => 'span3' }
-= form.input :text, :as => :text, :input_html => { :class => 'editor', :id => "#{brick.to_style_id}-text" }
-

@@ -1,9 +1,0 @@
-%section.grid
-  .inner
-    - if @visible_grid_items.present?
-      = render 'grid_items/grid', brick_id: brick_id
-      - if @hidden_grid_items.present?
-        = render 'grid_items/grid_hidden', brick_id: brick_id
-
-    - else
-      %p Es wurden noch keine Grid Items erfasst oder für diese Sprache wurden noch nicht alle Grid Items übersetzt.

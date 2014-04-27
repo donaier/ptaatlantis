@@ -1,8 +1,0 @@
-%section.section
-  %h1.title{ 'data-section-title' => ''}
-    %a{ href: "#brick#{accordion_history_item_brick.id}" }= "#{accordion_history_item_brick.format_year} #{accordion_history_item_brick.caption}"
-  .content{ 'data-section-content' => '', 'data-slug' => "brick#{accordion_history_item_brick.id}" }
-    .row
-      .columns.large-12
-      - accordion_history_item_brick.bricks.each do |brick|
-        = render brick

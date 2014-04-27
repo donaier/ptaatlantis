@@ -1,4 +1,0 @@
-.row
-  %div{ class: three_column_brick.to_style_class }
-    - three_column_brick.bricks.each_with_index do |column_brick, idx|
-      = render column_brick, column_style: Kuhsaft::Partition.style_for_index_foundation_three_column_brick(three_column_brick.partitioning, idx)
