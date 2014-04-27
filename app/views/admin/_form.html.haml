@@ -1,9 +1,0 @@
-= simple_form_for [:cms, resource], :html => { :class => 'form-horizontal', :multipart => true } do |f|
-  = f.error :base
-  = f.error_notification
-
-  = render 'form_fields', f: f, resource: resource
-
-  .form-actions
-    = f.button :submit, :class => 'btn btn-primary'
-    = link_to t('cms.cancel'), "/cms/#{controller.controller_name}", :class => 'btn'

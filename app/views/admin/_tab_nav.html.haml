@@ -1,7 +1,0 @@
-%ul.nav.nav-tabs.js-tabs
-  %li{ :class => resource_tab_active(resource) }
-    = link_to resource_class.model_name.human, '#resource', 'data-toggle' => :tab
-
-.tab-content
-  #resource.tab-pane{ :class => resource_tab_active(resource) }
-    = render 'form'
