@@ -22,3 +22,5 @@
 .env.*
 
 public/assets
+
+app/views/.DS_Store
