@@ -8,8 +8,8 @@ class Admin < ActiveRecord::Base
   include Shoestrap::CMSModel
 
   # TODO: Define what attributes are shown in the form and permitted by strong parameters
-  editable_attributes :first_name, :last_name
+  editable_attributes :first_name, :last_name, :email, :password
 
   # TODO: Define what attributes are shown in the index view
-  index_attributes :first_name, :last_name
+  index_attributes :first_name, :last_name, :email
 end
