@@ -1,0 +1,124 @@
+.lt-ie9 .top-bar
+  *zoom: 1
+  overflow: visible
+
+  &:before,
+  &:after
+    content: " "
+    display: table
+
+  &:after
+    clear: both
+
+  .toggle-topbar
+    display: none
+
+  .title-area
+    float: left
+
+  .name h1 a
+    width: auto
+
+  input,
+  .button
+    line-height: 2em
+    font-size: 0.875em
+    height: 2em
+    padding: 0 10px
+    position: relative
+    top: 8px
+
+  &.expanded
+
+.lt-ie9 .contain-to-grid .top-bar
+  max-width: 57.5em
+  margin: 0 auto
+
+.lt-ie9 .top-bar-section
+  -webkit-transition: none 0 0
+  -moz-transition: none 0 0
+  transition: none 0 0
+  left: 0 !important
+
+  ul
+    width: auto
+    height: auto !important
+    display: inline
+
+    li
+      float: left
+
+      > a
+        padding-right: 14px !important
+
+      .js-generated
+        display: none
+
+  li a:not(.button)
+    padding: 0 15px
+    line-height: 45px
+
+    &:hover
+
+  .has-dropdown
+    > a
+      padding-right: 35px !important
+
+      &:after
+        content: ""
+        display: block
+        width: 0
+        height: 0
+        border: solid 5px
+        margin-top: -2.5px
+
+    .moved
+      position: relative
+
+      > .dropdown
+        visibility: hidden
+
+    &:hover > .dropdown,
+    &:active > .dropdown
+      visibility: visible
+
+    .dropdown li.has-dropdown > a:after
+      border: none
+      content: "\00bb"
+      margin-top: -7px
+      right: 5px
+
+  .dropdown
+    left: 0
+    top: auto
+    background: transparent
+
+    li a
+      line-height: 1
+      white-space: nowrap
+      padding: 7px 15px
+
+    li label
+      white-space: nowrap
+
+    li .dropdown
+      left: 100%
+      top: 0
+
+  > ul > .divider
+    border-bottom: none
+    border-top: none
+    clear: none
+    height: 45px
+    width: 0px
+
+  .has-form
+    padding: 0 15px
+    height: 45px
+
+  ul.right li .dropdown
+    left: auto
+    right: 0
+
+  ul.right li .dropdown li .dropdown
+    right: 100%

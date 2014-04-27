@@ -1,0 +1,4 @@
+- if brick.errors.any?
+  .alert.alert-error
+    = t('.any_source_error')
+= form.input :embed_src, :as => :text, :input_html => { :class => 'span6', :rows => 5 }, :hint => t('.embed_src_optional')

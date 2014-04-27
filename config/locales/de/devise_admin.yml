@@ -1,0 +1,31 @@
+de:
+  devise:
+    forgot_password: "Passwort vergessen?"
+    sign_up: "Registrieren"
+    sign_in: "Anmelden"
+    no_confirmation: "Kein Bestätigungsmail erhalten?"
+    no_unlock: "Keine E-Mail mit Informationen zum Entsperren erhalten?"
+    sign_in_with: "Anmelden mit"
+    send_reset_password_instructions: "Passwort zurücksetzen"
+    resend_unlock_instructions: "Konto entsperren"
+    logout: "Abmelden"
+    login: "Anmelden"
+
+    failure:
+      user:
+        not_found_in_database: "Ungültige Anmeldedaten."
+      admin:
+        not_found_in_database: "Ungültige Anmeldedaten."
+
+  activerecord:
+    errors:
+      models:
+        admin:
+          attributes:
+            email:
+              blank: 'Darf nicht leer sein!'
+    attributes:
+      user:
+        remember_me: "Angemeldet bleiben"
+      admin:
+        remember_me: "Angemeldet bleiben"

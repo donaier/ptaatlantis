@@ -1,0 +1,2 @@
+%div{ :class => placeholder_brick.to_style_class, :id => "#{placeholder_brick.to_style_class}-#{placeholder_brick.id}" }
+  = render "kuhsaft/placeholder_bricks/partials/#{placeholder_brick.template_name}", brick_id: placeholder_brick.id if placeholder_brick.template_name.present?

@@ -1,0 +1,12 @@
+%div{ :class => text_brick.to_style_class }
+  = text_brick.text.to_s.html_safe
+  - if text_brick.read_more_text.present?
+    .toggle
+      .more{ :id => "#{text_brick.to_style_id}-content" }
+        = text_brick.read_more_text.to_s.html_safe
+      .less{ :id => "#{text_brick.to_style_id}" }
+        %a.button-read-more
+          Weiter lesen
+        %a.button-read-less
+          Weniger anzeigen
+

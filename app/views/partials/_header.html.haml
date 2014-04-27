@@ -1,0 +1,12 @@
+.row
+  .columns.large-12
+    %nav#main-nav.top-bar{role: "navigation", 'data-topbar' => true}
+      %ul.title-area
+        %li.name
+          %h1
+            %a.hide-text{ href: "/"}
+        %li.toggle-topbar.menu-icon
+          %a{ href: "#"}
+            %span Menü
+      %section.top-bar-section
+        = render_navigation

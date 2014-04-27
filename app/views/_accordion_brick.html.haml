@@ -1,0 +1,9 @@
+.row
+  .section-container.accordion.columns.large-12{ :class => accordion_brick.to_style_class, :id => accordion_brick.to_style_id 'data-section' => '', 'data-options' => 'one_up: false; deep_linking: true'}
+    - accordion_brick.bricks.each do |brick|
+      %section.section
+        %h1.title{ 'data-section-title' => ''}
+          %a{ href: "#panel#{brick.id}" }= brick.caption
+          %span= t('activerecord.attributes.kuhsaft/accordion_item_brick.read_more_text')
+        .content{ 'data-section-content' => '', 'data-slug' => "panel#{brick.id}" }
+          = render brick.bricks

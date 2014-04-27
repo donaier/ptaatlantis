@@ -1,0 +1,4 @@
+.row
+  .kuhsaft-accordion-brick-history.section-container.accordion.columns.large-12{ 'data-section' => '', 'data-options' => 'one_up: false; deep_linking: true'}
+    - accordion_history_brick.bricks.each do |brick|
+      = render brick unless brick.year.nil?

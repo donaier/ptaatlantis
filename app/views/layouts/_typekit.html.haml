@@ -1,0 +1,4 @@
+- if Rails.application.config.typekit_key.present?
+  = javascript_include_tag "//use.typekit.net/#{Rails.application.config.typekit_key}.js"
+  :javascript
+    try{Typekit.load();}catch(e){}

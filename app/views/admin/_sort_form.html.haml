@@ -1,0 +1,5 @@
+%td
+  .handle
+    %i.icon-resize-vertical
+    = form_for [:cms, resource], remote: true do |f|
+      = f.hidden_field :position, :class => 'position-field'

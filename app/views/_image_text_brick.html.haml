@@ -1,0 +1,6 @@
+.kuhsaft-image-text-brick
+  .row
+    .columns.large-7.push-5
+      = image_text_brick.text.to_s.html_safe
+    .columns.large-4.pull-8
+      = image_tag image_text_brick.image.max_width.url
