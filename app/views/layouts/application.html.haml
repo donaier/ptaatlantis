@@ -33,12 +33,12 @@
     %header{role: "banner"}
       = render 'partials/header'
 
-    %main#maincontent{role: "content"}
-      = yield
-
-    %footer{role: "contentinfo"}
-      = render 'partials/footer'
+    %main{role: "content"}
+      .row
+        .columns.large-2.no-left-padding
+          = render 'partials/menu'
+        #maincontent.columns.large-10
+          = yield
 
     -# Application JavaScripts
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
-

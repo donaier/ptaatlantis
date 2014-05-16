@@ -1,13 +1,17 @@
-.top-bar-wrapper
-  .row
-    .columns
-      %nav#main-nav.top-bar{ role: 'navigation', 'data-topbar' => true }
-        %ul.title-area
-          %li.toggle-topbar.menu-icon
-            %a{ href: "#"}
-              %span Menü
-        %section.top-bar-section
-          = render_navigation(level: 1)
-      %nav#sub-nav.top-bar{ role: 'navigation', 'data-topbar' => true }
-        %section.top-bar-section
-          = render_navigation(level: 2)
+.row
+  .columns.text-center
+    = link_to root_path do
+      = image_tag 'logo_rot_breit_gross.png'
+/ .top-bar-wrapper
+/   .row
+/     .columns
+/       %nav#main-nav.top-bar{ role: 'navigation', 'data-topbar' => true }
+/         %ul.title-area
+/           %li.toggle-topbar.menu-icon
+/             %a{ href: "#"}
+/               %span Menü
+/         %section.top-bar-section
+/           = render_navigation(level: 1)
+/       %nav#sub-nav.top-bar{ role: 'navigation', 'data-topbar' => true }
+/         %section.top-bar-section
+/           = render_navigation(level: 2)

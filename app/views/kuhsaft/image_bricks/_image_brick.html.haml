@@ -1,8 +1,8 @@
 .row{ :class => image_brick.to_style_class }
   .columns.text-center
     - if image_brick.image.present?
-      = image_tag(image_brick.image.converted.url, :alt => image_brick.alt_text.present? ? image_brick.alt_text : image_alt(image_brick.image.path) )
+      = image_tag(image_brick.image.url, :alt => image_brick.alt_text.present? ? image_brick.alt_text : image_alt(image_brick.image.path) )
 
       - if image_brick.caption.present?
-        .image-caption
+        .image-caption.text-left
           = image_brick.caption
