@@ -88,10 +88,10 @@ gem 'yaml_db', github: 'jetthoughts/yaml_db', ref: 'fb4b6bd7e12de3cffa93e0a298a1
 gem 'unicorn'
 gem 'airbrake'
 gem 'newrelic_rpm'
-gem 'kuhsaft', '~> 2.3.4'
+gem 'kuhsaft', '~> 2.4.1'
 gem 'bootstrap-sass'
 gem 'foundation-rails'
-gem 'sprig'
+gem 'sprig', github: 'screenconcept/sprig'
 gem 'valle'
 
 gem 'devise'

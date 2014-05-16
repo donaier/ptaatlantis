@@ -1,3 +1,7 @@
 # This will be run during `rake db:seed` in the :production environment.
 
 include Sprig::Helpers
+
+Kuhsaft::BrickType.delete_all
+
+sprig [Kuhsaft::BrickType]

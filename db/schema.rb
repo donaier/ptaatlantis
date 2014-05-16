@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140427195634) do
+ActiveRecord::Schema.define(version: 20140516092934) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -74,6 +74,12 @@ ActiveRecord::Schema.define(version: 20140427195634) do
     t.boolean  "open_in_new_window"
     t.string   "alt_text"
     t.integer  "col_count",          default: 0
+  end
+
+  create_table "kuhsaft_ckimages", force: true do |t|
+    t.string   "file"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "kuhsaft_pages", force: true do |t|

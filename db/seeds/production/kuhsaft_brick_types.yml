@@ -1,0 +1,10 @@
+records:
+  - sprig_id: 1
+    class_name: 'Kuhsaft::TextBrick'
+    group: 'elements'
+  - sprig_id: 2
+    class_name: 'Kuhsaft::ImageBrick'
+    group: 'elements'
+  # - sprig_id: 3
+  #   class_name: 'Kuhsaft::PlaceholderBrick'
+  #   group: 'elements'

@@ -5,6 +5,12 @@ GIT
   specs:
     yaml_db (0.2.3)
 
+GIT
+  remote: git://github.com/screenconcept/sprig.git
+  revision: cb9f4e2b02ea73d1548e6dda1884b633e7efe670
+  specs:
+    sprig (0.1.1)
+
 GEM
   remote: https://rubygems.org/
   remote: https://x6veLi2LExUsoSQrtiwP@gem.fury.io/me/
@@ -160,7 +166,7 @@ GEM
       railties (>= 3.2.16)
     json (1.8.1)
     kgio (2.9.2)
-    kuhsaft (2.3.4)
+    kuhsaft (2.4.1)
       ancestry
       bootstrap-sass (= 2.3.2.2)
       bourbon
@@ -321,7 +327,6 @@ GEM
       eventmachine (~> 1.0.0)
       thin (~> 1.5.0)
     slop (3.5.0)
-    sprig (0.1.1)
     spring (1.1.2)
     spring-commands-rspec (1.0.1)
       spring (>= 0.9.1)
@@ -398,7 +403,7 @@ DEPENDENCIES
   inherited_resources
   jbuilder (~> 1.2)
   jquery-rails
-  kuhsaft (~> 2.3.4)
+  kuhsaft (~> 2.4.1)
   launchy
   mail
   mailcatcher
@@ -418,7 +423,7 @@ DEPENDENCIES
   shoestrap (>= 1.2.0)
   simple-navigation
   simple_form
-  sprig
+  sprig!
   spring-commands-rspec
   terminal-notifier-guard
   therubyracer
