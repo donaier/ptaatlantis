@@ -2,7 +2,7 @@ CKEDITOR.editorConfig = (config) ->
   config.language = "de"
   config.removeButtons = "Anchor,Underline,Strike,Subscript,Superscript"
   config.format_tags = "p;h1;h2;h3"
-  config.toolbar = [["Undo", "Redo"],["NumberedList", "BulletedList", "Bold"], ["Link", "Unlink"],
+  config.toolbar = [["Undo", "Redo"],['Format'],["NumberedList", "BulletedList", "Bold"], ["Link", "Unlink"],
                     ["Source", "-", "ShowBlocks"]]
 
   true

@@ -25,16 +25,7 @@
     = favicon_link_tag('favicons/32x32.png', rel: 'icon', type: 'image/png')
     = favicon_link_tag('favicons/32x32.ico')
 
-    -# Typekit
-    = render 'layouts/typekit'
-
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    <!--[if (lt IE 9) & (!IEMobile)]>
-    = stylesheet_link_tag    'ie8', media: 'all', 'data-turbolinks-track' => true
-    <![endif]-->
-
-    = javascript_include_tag 'modernizr', 'data-turbolinks-track' => true
-    != google_analytics_code
 
     = csrf_meta_tags
 
@@ -51,8 +42,3 @@
     -# Application JavaScripts
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
 
-    -# Selectivizr
-    <!--[if lte IE 8]>
-    = javascript_include_tag 'rem'
-    = javascript_include_tag 'selectivizr'
-    <![endif]-->
