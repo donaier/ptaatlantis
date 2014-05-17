@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140516092934) do
+ActiveRecord::Schema.define(version: 20140516205806) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -62,7 +62,6 @@ ActiveRecord::Schema.define(version: 20140516092934) do
     t.text     "href"
     t.string   "link_style"
     t.integer  "partitioning"
-    t.string   "image"
     t.string   "image_size"
     t.text     "embed_src"
     t.string   "video"
@@ -74,6 +73,10 @@ ActiveRecord::Schema.define(version: 20140516092934) do
     t.boolean  "open_in_new_window"
     t.string   "alt_text"
     t.integer  "col_count",          default: 0
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "kuhsaft_ckimages", force: true do |t|
