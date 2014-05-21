@@ -3,6 +3,7 @@ RailsTemplate::Application.routes.draw do
 
   namespace :cms do
     resources :admins
+    resources :galleries
   end
 
   root 'kuhsaft/pages#show'
