@@ -23,6 +23,11 @@
         %td= item.title
         %td= item.text
         %td
+          = link_to new_cms_gallery_gallery_image_path(item), class: 'btn btn-primary btn-small btn-block' do
+            %i.icon-plus-sign.icon-white
+          = link_to cms_gallery_gallery_images_path(item), class: 'btn btn-small btn-block' do
+            %i.icon-th-list
+            = "(#{item.gallery_images.count})"
         %td
           %i{ class: item.published ? 'icon-ok' : 'icon-remove' } 
         %td

@@ -1,0 +1,7 @@
+%h1
+  = t("cms.new_title", singular_name: t("cms.#{resource_collection_name}.singular_name"))
+  = "in Galerie '#{@gallery_image.gallery.title}'"
+
+= render 'form'
+
+= link_to t('cms.back'), cms_galleries_path

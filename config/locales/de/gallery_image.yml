@@ -1,0 +1,18 @@
+de:
+  cms:
+    gallery_images:
+      singular_name: Bild
+      plural_name: Bilder
+
+  activerecord:
+    attributes:
+      gallery_image:
+        image: Bild
+        description: Beschreibung
+        gallery_id: Galerie
+        position: Position
+
+    models:
+      gallery_image:
+        one: Bild
+        other: Bilder
