@@ -5,6 +5,6 @@
       = link_to brick.image(:big) do
         = image_tag brick.image(:thumb)
 
-= form.input :image, :as => :file, :input_html => { :class => 'span3' }
+= form.file_field :image
 = form.input :alt_text, :as => :string, :input_html => { :class => 'span6' }
 = form.input :caption, :as => :string, :input_html => { :class => 'span6' }
