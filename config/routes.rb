@@ -1,4 +1,4 @@
-RailsTemplate::Application.routes.draw do
+Ptaatlantis::Application.routes.draw do
   devise_for :admins
 
   namespace :cms do

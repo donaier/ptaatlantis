@@ -6,7 +6,7 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
 
-module RailsTemplate
+module Ptaatlantis
   class Application < Rails::Application
     config.app_name = ENV['APP_IDENTIFIER']
 
