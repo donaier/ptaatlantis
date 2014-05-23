@@ -1,16 +1,8 @@
 production:
   adapter: postgresql
-  database: <%= "#{ENV['APP_IDENTIFIER']}_production" %>
-  username: <%= ENV['APP_IDENTIFIER'] %>
-  password: <%= begin IO.read("#{ENV['HOME']}/.config/#{ENV['APP_IDENTIFIER']}_production/db") rescue "" end %>
-  encoding: unicode
-  pool: 5
-
-staging:
-  adapter: postgresql
-  database: <%= "#{ENV['APP_IDENTIFIER']}_staging" %>
-  username: <%= ENV['APP_IDENTIFIER'] %>
-  password: <%= begin IO.read("#{ENV['HOME']}/.config/#{ENV['APP_IDENTIFIER']}_staging/db") rescue "" end %>
+  database: ptaatlantis_production
+  username: ptaatlantis
+  password: 
   encoding: unicode
   pool: 5
 
@@ -22,14 +14,4 @@ development:
   encoding: unicode
   pool: 5
   host: localhost
-  port: <%= ENV['BOXEN_POSTGRESQL_PORT'] || 5432 %>
-
-test:
-  adapter: postgresql
-  database: <%= "#{ENV['APP_IDENTIFIER']}_test" %>
-  username: screenconcept
-  password:
-  encoding: unicode
-  host: localhost
-  pool: 5
   port: <%= ENV['BOXEN_POSTGRESQL_PORT'] || 5432 %>
