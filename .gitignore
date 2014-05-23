@@ -21,8 +21,6 @@
 # Ignore sensible data
 .env.*
 
-public/assets
-
 app/views/.DS_Store
 
 */**/.DS_Store
