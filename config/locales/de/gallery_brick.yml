@@ -1,0 +1,7 @@
+de:
+  activerecord:
+    models:
+      kuhsaft/gallery_brick: 'Bildergalerie'
+    attributes:
+      kuhsaft/gallery_brick:
+        gallery_id: 'Galerie'

@@ -5,6 +5,7 @@
 #= require foundation/foundation
 #= require foundation/foundation.dropdown
 #= require foundation/foundation.topbar
+#= require foundation/foundation.orbit
 
 ###
 # ---ATTENTION: MOVE THEM UP FOR USE---
@@ -37,7 +38,7 @@ $(document).foundation('topbar')
 # $(document).foundation('joyride')
 # $(document).foundation('magellan')
 # $(document).foundation('offcanvas')
-# $(document).foundation('orbit')
+$(document).foundation('orbit')
 # $(document).foundation('reveal')
 # $(document).foundation('slider')
 # $(document).foundation('tab')

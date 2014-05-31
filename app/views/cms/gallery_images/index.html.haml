@@ -11,15 +11,16 @@
 %table.table.table-bordered.table-striped
   %thead
     %tr
+      %th
       %th= collection.human_attribute_name :image
       %th= collection.human_attribute_name :description
-      %th
       %th
 
   %tbody
     - collection.each do |item|
       %tr
-        %td= item.image
+        %td
+        %td= image_tag item.image(:thumb)
         %td= item.description
         %td
           = link_to edit_cms_gallery_gallery_image_path(item.gallery, item), class: 'btn btn-small' do
