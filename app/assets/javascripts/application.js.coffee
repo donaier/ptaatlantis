@@ -19,7 +19,6 @@
 # require foundation/foundation.joyride
 # require foundation/foundation.magellan
 # require foundation/foundation.offcanvas
-# require foundation/foundation.orbit
 # require foundation/foundation.reveal
 # require foundation/foundation.slider
 # require foundation/foundation.tab
@@ -29,6 +28,7 @@
 
 $(document).foundation('dropdown')
 $(document).foundation('topbar')
+$(document).foundation('orbit')
 # $(document).foundation('abide')
 # $(document).foundation('accordion')
 # $(document).foundation('alerts')
@@ -38,7 +38,6 @@ $(document).foundation('topbar')
 # $(document).foundation('joyride')
 # $(document).foundation('magellan')
 # $(document).foundation('offcanvas')
-$(document).foundation('orbit')
 # $(document).foundation('reveal')
 # $(document).foundation('slider')
 # $(document).foundation('tab')
