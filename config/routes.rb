@@ -3,6 +3,9 @@ Ptaatlantis::Application.routes.draw do
 
   namespace :cms do
     resources :admins
+    resources :galleries do
+      resources :gallery_images
+    end
   end
 
   root 'kuhsaft/pages#show'

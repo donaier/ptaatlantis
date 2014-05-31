@@ -1,0 +1,41 @@
+%h1= t("cms.index_title", plural_name: t("cms.#{resource_collection_name}.plural_name"))
+
+.row-fluid.actions
+  .pull-right.padded
+    = link_to new_resource_path, :class => 'btn btn-primary' do
+      %i.icon-plus-sign.icon-white
+      = t("cms.#{resource_collection_name}.new", plural_name: resource_collection_name, default: t('cms.default.new'))
+
+%table.table.table-bordered.table-striped
+  %thead
+    %tr
+      %th
+      %th= collection.human_attribute_name :title
+      %th= collection.human_attribute_name :text
+      %th Bilder
+      %th= collection.human_attribute_name :published
+      %th
+
+  %tbody
+    - collection.each do |item|
+      %tr
+        %td
+        %td= item.title
+        %td= item.text
+        %td
+          = link_to new_cms_gallery_gallery_image_path(item), class: 'btn btn-primary btn-small btn-block' do
+            %i.icon-plus-sign.icon-white
+          = link_to cms_gallery_gallery_images_path(item), class: 'btn btn-small btn-block' do
+            %i.icon-th-list
+            = "(#{item.gallery_images.count})"
+        %td
+          %i{ class: item.published ? 'icon-ok' : 'icon-remove' } 
+        %td
+          = link_to edit_resource_path(item), class: 'btn btn-small' do
+            %i.icon-edit
+            = t("cms.edit")
+          =link_to resource_path(item), method: :delete, data: { confirm: t('cms.are_you_sure') }, class: 'btn btn-small btn-danger' do
+            %i.icon-trash.icon-white
+            =t('cms.destroy')
+
+%br

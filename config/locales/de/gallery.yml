@@ -1,0 +1,19 @@
+de:
+  cms:
+    galleries:
+      singular_name: Galerie
+      plural_name: Galerien
+      navigation_title: Bildergalerien
+
+  activerecord:
+    attributes:
+      gallery:
+        title: Titel
+        text: Beschreibung
+        published: Veröffentlicht?
+        position: Position
+
+    models:
+      gallery:
+        one: Galerie
+        other: Galerien

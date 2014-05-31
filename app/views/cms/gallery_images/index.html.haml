@@ -1,0 +1,33 @@
+%h1
+  = t("cms.index_title", plural_name: t("cms.#{resource_collection_name}.plural_name"))
+  = "der Galerie '#{Gallery.find(params[:gallery_id]).title}'"
+
+.row-fluid.actions
+  .pull-right.padded
+    = link_to new_cms_gallery_gallery_image_path(Gallery.find(params[:gallery_id])), class: 'btn btn-primary' do
+      %i.icon-plus-sign.icon-white
+      Neues Bild
+
+%table.table.table-bordered.table-striped
+  %thead
+    %tr
+      %th= collection.human_attribute_name :image
+      %th= collection.human_attribute_name :description
+      %th
+      %th
+
+  %tbody
+    - collection.each do |item|
+      %tr
+        %td= item.image
+        %td= item.description
+        %td
+          = link_to edit_cms_gallery_gallery_image_path(item.gallery, item), class: 'btn btn-small' do
+            %i.icon-edit
+            = t("cms.edit")
+          =link_to cms_gallery_gallery_image_path(item.gallery, item), method: :delete, data: { confirm: t('cms.are_you_sure') }, class: 'btn btn-small btn-danger' do
+            %i.icon-trash.icon-white
+            =t('cms.destroy')
+
+%br
+= link_to t('cms.back'), cms_galleries_path
