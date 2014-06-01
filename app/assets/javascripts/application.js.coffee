@@ -28,7 +28,15 @@
 
 $(document).foundation('dropdown')
 $(document).foundation('topbar')
-$(document).foundation('orbit')
+$(document).foundation 'orbit':
+  resume_on_mouseout: true,
+  next_on_click: true,
+  slide_number: false,
+  timer_show_progress_bar: false,
+  bullets: false,
+  timer: false
+  variable_height: true
+
 # $(document).foundation('abide')
 # $(document).foundation('accordion')
 # $(document).foundation('alerts')

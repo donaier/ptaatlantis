@@ -1,0 +1,25 @@
+.orbit-container
+  padding: rem-calc(10 0)
+
+  img
+    margin: 0 auto
+
+  .orbit-prev, .orbit-next
+    &:hover
+      background-color: transparent
+    background-size: contain
+    background-repeat: no-repeat
+    span
+      display: none
+
+  .orbit-prev
+    left: rem-calc(20)
+    background-image: image-url('arrow_left.png')
+    &:hover
+      background-image: image-url('arrow_left_hover.png')
+
+  .orbit-next
+    right: rem-calc(20)
+    background-image: image-url('arrow_right.png')
+    &:hover
+      background-image: image-url('arrow_right_hover.png')

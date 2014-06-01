@@ -6,7 +6,7 @@ class GalleryImage < ActiveRecord::Base
   belongs_to :gallery
 
   has_attached_file :image,
-    styles: { big: '980x735>', thumb: '120x100>' },
+    styles: { big: '980x735>', thumb: '160x120>' },
     :path => ":rails_root/public/system/:class/:attachment/:id/:style/:filename",
     :url => "/system/:class/:attachment/:id/:style/:filename"
 

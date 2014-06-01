@@ -1,6 +1,9 @@
 .row{ :class => gallery_brick.to_style_class }
-  .columns
+  .columns.text-center
     %ul{ 'data-orbit' => true }
       - Gallery.find(gallery_brick.gallery_id).gallery_images.each do |gallery_image|
         %li
           = image_tag gallery_image.image(:big)
+          - if gallery_image.description.present?
+            .orbit-caption
+              %p= gallery_image.description
