@@ -15,4 +15,9 @@ class Cms::GalleryImagesController < Shoestrap::BaseController
   def destroy
     destroy!{ cms_gallery_gallery_images_path(resource.gallery) }
   end
+
+  def reorder
+    GalleryImage.find(params[:gallery_image][:id]).insert_at(params[:gallery_image][:position].to_i)
+    redirect_to cms_gallery_gallery_images_path(resource.gallery)
+  end
 end

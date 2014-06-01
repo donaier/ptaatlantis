@@ -9,5 +9,5 @@ class Gallery < ActiveRecord::Base
 
   validates_presence_of :title
 
-  editable_attributes :title, :text, :published
+  editable_attributes :title, :text
 end

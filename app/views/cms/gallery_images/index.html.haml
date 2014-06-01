@@ -14,7 +14,7 @@
   %br
   Bilder werden zugeschnitten auf maximal 980x735px (entspricht Fotoverhältniss 4:3) kleinere Auflösungen vermeiden.
 
-%table.table.table-bordered.table-striped
+%table.table.table-bordered.table-striped.sortable-table
   %thead
     %tr
       %th
@@ -24,8 +24,8 @@
 
   %tbody
     - collection.each do |item|
-      %tr
-        %td
+      %tr.sortable-row
+        %td= render 'cms/shared/sortable_form', item: item
         %td= image_tag item.image(:thumb)
         %td= item.description
         %td

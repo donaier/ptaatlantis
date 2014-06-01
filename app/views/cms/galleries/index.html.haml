@@ -9,17 +9,14 @@
 %table.table.table-bordered.table-striped
   %thead
     %tr
-      %th
       %th= collection.human_attribute_name :title
       %th= collection.human_attribute_name :text
       %th Bilder
-      %th= collection.human_attribute_name :published
       %th
 
   %tbody
     - collection.each do |item|
       %tr
-        %td
         %td= item.title
         %td= item.text
         %td
@@ -28,8 +25,6 @@
           = link_to cms_gallery_gallery_images_path(item), class: 'btn btn-small btn-block' do
             %i.icon-th-list
             = "(#{item.gallery_images.count})"
-        %td
-          %i{ class: item.published ? 'icon-ok' : 'icon-remove' } 
         %td
           = link_to edit_resource_path(item), class: 'btn btn-small' do
             %i.icon-edit

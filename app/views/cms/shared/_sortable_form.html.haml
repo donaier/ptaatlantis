@@ -1,0 +1,5 @@
+.handle
+  %i.icon-resize-vertical
+= form_for(item, url: { controller: item.class.to_s.tableize, action: "reorder" }, :remote => true, method: "post") do |f|
+  = f.hidden_field :id
+  = f.hidden_field :position, :class => 'position-field'
