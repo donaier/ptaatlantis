@@ -1,3 +1,4 @@
+- binding.pry
 %h1
   = t("cms.index_title", plural_name: t("cms.#{resource_collection_name}.plural_name"))
   = "der Galerie '#{Gallery.find(params[:gallery_id]).title}'"
@@ -23,7 +24,7 @@
       %th
 
   %tbody
-    - collection.each do |item|
+    - collection.where(gallery_id: params[:gallery_id]).each do |item|
       %tr.sortable-row
         %td= render 'cms/shared/sortable_form', item: item
         %td= image_tag item.image(:thumb)
