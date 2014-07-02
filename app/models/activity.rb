@@ -18,6 +18,7 @@ class Activity < ActiveRecord::Base
   ]
 
   scope :ordered, -> { order('starts_at ASC') }
+  scope :from_now, -> { Activity.ordered.where("starts_at > ?", Date.today - 1.day) }
 
   editable_attributes :starts_at, :title, :description, :atlas, :titan, :artemis, :meeting_point
 end
