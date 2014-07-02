@@ -8,6 +8,6 @@ records:
   - sprig_id: 3
     class_name: 'Kuhsaft::GalleryBrick'
     group: 'elements'
-  # - sprig_id: 4
-  #   class_name: 'Kuhsaft::PlaceholderBrick'
-  #   group: 'elements'
+  - sprig_id: 4
+    class_name: 'Kuhsaft::ActivityBrick'
+    group: 'elements'

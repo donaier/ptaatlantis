@@ -1,0 +1,67 @@
+- @activities = Activity.ordered
+- @atlas = @activities.where(atlas: true)
+- @titan = @activities.where(titan: true)
+- @artemis = @activities.where(artemis: true)
+
+- if @atlas.any?
+  .row
+    .columns
+      %h2 Atlas
+      %h3= @atlas.first.title
+      %p= @atlas.first.starts_at.strftime('%d.%m - %H:%M Uhr')
+      %p= @atlas.first.description
+      %p= "Treffpunkt: #{@atlas.first.meeting_point}"
+
+      - if @atlas.size > 1
+        %dl.accordion{ 'data-accordion' => true }
+          %dd.accordion-navigation
+            = link_to 'alle Atlas Aktivitäten', '#panel1'
+            .content#panel1
+              - @activities.where(atlas: true)[1..-1].each do |activity|
+                .activity
+                  %h3= activity.title
+                  %p= activity.starts_at.strftime('%d.%m - %H:%M Uhr')
+                  %p= activity.description
+                  %p= "Treffpunkt: #{activity.meeting_point}"
+
+- if @titan.any?
+  .row
+    .columns
+      %h2 Titan
+      %h3= @titan.first.title
+      %p= @titan.first.starts_at.strftime('%d.%m - %H:%M Uhr')
+      %p= @titan.first.description
+      %p= "Treffpunkt: #{@titan.first.meeting_point}"
+
+      - if @titan.size > 1
+        %dl.accordion{ 'data-accordion' => true }
+          %dd.accordion-navigation
+            = link_to 'alle Titan Aktivitäten', '#panel2'
+            .content#panel2
+              - @activities.where(titan: true)[1..-1].each do |activity|
+                .activity
+                  %h3= activity.title
+                  %p= activity.starts_at.strftime('%d.%m - %H:%M Uhr')
+                  %p= activity.description
+                  %p= "Treffpunkt: #{activity.meeting_point}"
+
+- if @artemis.any?
+  .row
+    .columns
+      %h2 Artemis
+      %h3= @artemis.first.title
+      %p= @artemis.first.starts_at.strftime('%d.%m - %H:%M Uhr')
+      %p= @artemis.first.description
+      %p= "Treffpunkt: #{@artemis.first.meeting_point}"
+
+      - if @artemis.size > 1
+        %dl.accordion{ 'data-accordion' => true }
+          %dd.accordion-navigation
+            = link_to 'alle Artemis Aktivitäten', '#panel3'
+            .content#panel3
+              - @activities.where(artemis: true)[1..-1].each do |activity|
+                .activity
+                  %h3= activity.title
+                  %p= activity.starts_at.strftime('%d.%m - %H:%M Uhr')
+                  %p= activity.description
+                  %p= "Treffpunkt: #{activity.meeting_point}"

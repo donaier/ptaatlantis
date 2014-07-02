@@ -1,0 +1,15 @@
+%hr
+= simple_form_for([:cms, resource], wrapper: :bootstrap, html: { class: 'form-horizontal' }) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :starts_at
+    = f.input :title
+    = f.input :description
+    = f.input :atlas
+    = f.input :titan
+    = f.input :artemis
+    = f.input :meeting_point, collection: Activity::MEETING_POINTS
+
+  .form-actions
+    = f.button :submit

@@ -6,12 +6,12 @@
 #= require foundation/foundation.dropdown
 #= require foundation/foundation.topbar
 #= require foundation/foundation.orbit
+#= require foundation/foundation.accordion
 
 ###
 # ---ATTENTION: MOVE THEM UP FOR USE---
 #
 # require foundation/foundation.abide
-# require foundation/foundation.accordion
 # require foundation/foundation.alert
 # require foundation/foundation.clearing
 # require foundation/foundation.equalizer
@@ -28,6 +28,7 @@
 
 $(document).foundation('dropdown')
 $(document).foundation('topbar')
+$(document).foundation('accordion')
 $(document).foundation 'orbit':
   resume_on_mouseout: true,
   next_on_click: true,

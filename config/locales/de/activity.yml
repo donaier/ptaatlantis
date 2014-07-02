@@ -1,0 +1,22 @@
+de:
+  cms:
+    activities:
+      singular_name: Aktivität
+      plural_name: Aktivitäten
+      navigation_title: Aktivitäten
+
+  activerecord:
+    attributes:
+      activity:
+        starts_at: Start
+        title: Titel
+        description: Beschreibung
+        atlas: Atlas
+        titan: Titan
+        artemis: Artemis
+        meeting_point: Treffpunkt
+
+    models:
+      activity:
+        one: Aktivität
+        other: Aktivitäten

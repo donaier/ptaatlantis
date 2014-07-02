@@ -1,0 +1,41 @@
+%h1= t("cms.index_title", plural_name: t("cms.#{resource_collection_name}.plural_name"))
+
+.row-fluid.actions
+  .pull-right.padded
+    = link_to new_resource_path, :class => 'btn btn-primary' do
+      %i.icon-plus-sign.icon-white
+      = t("cms.#{resource_collection_name}.new", plural_name: resource_collection_name, default: t('cms.default.new'))
+
+%table.table.table-bordered.table-striped
+  %thead
+    %tr
+      %th= collection.human_attribute_name :starts_at
+      %th= collection.human_attribute_name :title
+      %th= collection.human_attribute_name :description
+      %th= collection.human_attribute_name :atlas
+      %th= collection.human_attribute_name :titan
+      %th= collection.human_attribute_name :artemis
+      %th= collection.human_attribute_name :meeting_point
+      %th
+      %th
+
+  %tbody
+    - collection.each do |item|
+      %tr
+        %td= item.starts_at.strftime('%d.%m - %H:%M Uhr')
+        %td= item.title
+        %td= item.description
+        %td
+          %i{ class: item.atlas ? 'icon-ok' : 'icon-remove' }
+        %td
+          %i{ class: item.titan ? 'icon-ok' : 'icon-remove' }
+        %td
+          %i{ class: item.artemis ? 'icon-ok' : 'icon-remove' }
+        %td= item.meeting_point
+        %td= link_to t("cms.edit"), edit_resource_path(item)
+        %td
+          =link_to resource_path(item), method: :delete, data: { confirm: t('cms.are_you_sure') }, class: 'btn btn-small btn-danger' do
+            %i.icon-trash.icon-white
+            =t('cms.destroy')
+
+%br
