@@ -17,6 +17,8 @@ class Activity < ActiveRecord::Base
     '11 - Technikum'
   ]
 
+  validates_presence_of :title, :starts_at, :meeting_point
+
   scope :ordered, -> { order('starts_at ASC') }
   scope :from_now, -> { Activity.ordered.where("starts_at > ?", Date.today - 1.day) }
 
