@@ -10,7 +10,8 @@
       %h3= @atlas.first.title
       %p= @atlas.first.starts_at.strftime('%d.%m - %H:%M Uhr')
       %p= @atlas.first.description
-      %p= "Treffpunkt: #{@atlas.first.meeting_point}"
+      - if @atlas.first.meeting_point.present?
+        %p= "Treffpunkt: #{@atlas.first.meeting_point}"
 
       - if @atlas.size > 1
         %dl.accordion{ 'data-accordion' => true }
@@ -22,7 +23,8 @@
                   %h3= activity.title
                   %p= activity.starts_at.strftime('%d.%m - %H:%M Uhr')
                   %p= activity.description
-                  %p= "Treffpunkt: #{activity.meeting_point}"
+                  - if activity.meeting_point.present?
+                    %p= "Treffpunkt: #{activity.meeting_point}"
 
 - if @titan.any?
   .row
@@ -31,7 +33,8 @@
       %h3= @titan.first.title
       %p= @titan.first.starts_at.strftime('%d.%m - %H:%M Uhr')
       %p= @titan.first.description
-      %p= "Treffpunkt: #{@titan.first.meeting_point}"
+      - if @titan.first.meeting_point.present?
+        %p= "Treffpunkt: #{@titan.first.meeting_point}"
 
       - if @titan.size > 1
         %dl.accordion{ 'data-accordion' => true }
@@ -43,7 +46,8 @@
                   %h3= activity.title
                   %p= activity.starts_at.strftime('%d.%m - %H:%M Uhr')
                   %p= activity.description
-                  %p= "Treffpunkt: #{activity.meeting_point}"
+                  - if activity.meeting_point.present?
+                    %p= "Treffpunkt: #{activity.meeting_point}"
 
 - if @artemis.any?
   .row
@@ -52,7 +56,8 @@
       %h3= @artemis.first.title
       %p= @artemis.first.starts_at.strftime('%d.%m - %H:%M Uhr')
       %p= @artemis.first.description
-      %p= "Treffpunkt: #{@artemis.first.meeting_point}"
+      - if @artemis.first.meeting_point.present?
+        %p= "Treffpunkt: #{@artemis.first.meeting_point}"
 
       - if @artemis.size > 1
         %dl.accordion{ 'data-accordion' => true }
@@ -64,4 +69,5 @@
                   %h3= activity.title
                   %p= activity.starts_at.strftime('%d.%m - %H:%M Uhr')
                   %p= activity.description
-                  %p= "Treffpunkt: #{activity.meeting_point}"
+                  - if activity.meeting_point.present?
+                    %p= "Treffpunkt: #{activity.meeting_point}"
