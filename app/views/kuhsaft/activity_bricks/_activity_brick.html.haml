@@ -5,14 +5,16 @@
 
 - if @atlas.any?
   .row
-    .columns
+    .columns.large-10.large-offset-1
+      %p
       %h2 Atlas
       %h3= @atlas.first.title
       %p= @atlas.first.starts_at.strftime('%d.%m - %H:%M Uhr')
       %p= @atlas.first.description
       - if @atlas.first.meeting_point.present?
         %p= "Treffpunkt: #{@atlas.first.meeting_point}"
-
+  .row
+    .columns
       - if @atlas.size > 1
         %dl.accordion{ 'data-accordion' => true }
           %dd.accordion-navigation
@@ -28,14 +30,16 @@
 
 - if @titan.any?
   .row
-    .columns
+    .columns.large-10.large-offset-1
+      %p
       %h2 Titan
       %h3= @titan.first.title
       %p= @titan.first.starts_at.strftime('%d.%m - %H:%M Uhr')
       %p= @titan.first.description
       - if @titan.first.meeting_point.present?
         %p= "Treffpunkt: #{@titan.first.meeting_point}"
-
+  .row
+    .columns
       - if @titan.size > 1
         %dl.accordion{ 'data-accordion' => true }
           %dd.accordion-navigation
@@ -51,14 +55,16 @@
 
 - if @artemis.any?
   .row
-    .columns
+    .columns.large-10.large-offset-1
+      %p
       %h2 Artemis
       %h3= @artemis.first.title
       %p= @artemis.first.starts_at.strftime('%d.%m - %H:%M Uhr')
       %p= @artemis.first.description
       - if @artemis.first.meeting_point.present?
         %p= "Treffpunkt: #{@artemis.first.meeting_point}"
-
+  .row
+    .columns
       - if @artemis.size > 1
         %dl.accordion{ 'data-accordion' => true }
           %dd.accordion-navigation
