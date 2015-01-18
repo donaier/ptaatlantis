@@ -1,0 +1,7 @@
+.alert.alert-info
+  %p "Embed Code" von youtube (iframe) verwenden und dabei die 'width' und 'height' attribute löschen.
+  %br
+  %p Beispiel:
+  %code
+    = '<iframe src="//www.youtube.com/embed/8MVQvyEXHTY" frameborder="0" allowfullscreen></iframe>'
+= form.input :embed_src, :as => :text, :input_html => { :class => 'span6', :rows => 5 }

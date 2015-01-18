@@ -1,0 +1,5 @@
+.row{ class: video_brick.to_style_class }
+  .columns
+    - if video_brick.embed_src.present?
+      .video-container
+        = video_brick.embed_src.html_safe
