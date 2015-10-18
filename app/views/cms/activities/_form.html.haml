@@ -9,7 +9,7 @@
     = f.input :atlas
     = f.input :titan
     = f.input :artemis
-    = f.input :meeting_point, collection: Activity::MEETING_POINTS
+    = f.input :meeting_point, collection: Activity::MEETING_POINTS + Mappin.pin_array
 
   .form-actions
     = f.button :submit
