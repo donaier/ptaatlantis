@@ -73,7 +73,6 @@ group :development, :test do
   gem 'rb-fsevent' #if `uname`.include? 'Darwin'
   gem 'mailcatcher'
   gem 'capybara'
-  gem 'capybara-webkit'
   gem 'launchy'
   gem 'better_errors'
   gem 'binding_of_caller'
