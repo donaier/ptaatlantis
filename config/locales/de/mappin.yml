@@ -1,0 +1,18 @@
+de:
+  cms:
+    mappins:
+      singular_name: Besammlungsort
+      plural_name: Besammlungsorte
+      navigation_title: Besammlungsorte (Google Map)
+
+  activerecord:
+    attributes:
+      mappin:
+        lat: Lat (Breitengrad)
+        lng: Lng (Längengrad)
+        marker_text: Text
+
+    models:
+      mappin:
+        one: Besammlungsort
+        other: Besammlungsorte

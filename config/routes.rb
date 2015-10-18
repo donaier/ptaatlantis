@@ -7,6 +7,7 @@ Ptaatlantis::Application.routes.draw do
 
   namespace :cms do
     resources :admins
+    resources :mappins
     resources :activities
     resources :galleries do
       resources :gallery_images, concerns: :sortable

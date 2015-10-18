@@ -1,0 +1,4 @@
+de:
+  activerecord:
+    models:
+      kuhsaft/map_brick: 'Map mit Besammlungspunkten'

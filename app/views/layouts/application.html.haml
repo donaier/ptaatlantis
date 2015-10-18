@@ -27,6 +27,9 @@
     = javascript_include_tag :modernizr
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
 
+    -# Application JavaScripts
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+
     = csrf_meta_tags
 
   %body{ class: body_class }
@@ -39,6 +42,3 @@
           = render 'partials/menu'
         #maincontent.columns.large-10
           = yield
-
-    -# Application JavaScripts
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true

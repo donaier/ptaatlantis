@@ -1,0 +1,35 @@
+#map
+  height: 400px
+
+.map-container
+  padding: rem-calc(10 0)
+
+.custom_marker
+  background-color: white
+  padding: rem-calc(5)
+  position: relative
+  border: 2px solid #822124
+  min-width: rem-calc(80)
+  margin-top: rem-calc(-10)
+
+.custom_marker:after, .custom_marker:before
+  top: 100%
+  left: 50%
+  border: solid transparent
+  content: " "
+  height: 0
+  width: 0
+  position: absolute
+  pointer-events: none
+
+.custom_marker:after
+  border-color: rgba(255, 255, 255, 0)
+  border-top-color: #ffffff
+  border-width: 10px
+  margin-left: -10px
+
+.custom_marker:before
+  border-color: rgba(130, 33, 36, 0)
+  border-top-color: #822124
+  border-width: 13px
+  margin-left: -13px

@@ -129,6 +129,7 @@ GEM
     foundation-rails (5.2.2.0)
       railties (>= 3.1.0)
       sass (>= 3.2.0)
+    gmaps4rails (2.1.2)
     grit (2.5.0)
       diff-lcs (~> 1.1)
       mime-types (~> 1.15)
@@ -376,6 +377,7 @@ GEM
     uglifier (2.5.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    underscore-rails (1.8.3)
     unicorn (4.8.2)
       kgio (~> 2.6)
       rack
@@ -409,6 +411,7 @@ DEPENDENCIES
   dotenv-rails
   fabrication
   foundation-rails
+  gmaps4rails
   guard-rspec
   guard-spring
   haml
@@ -444,6 +447,7 @@ DEPENDENCIES
   therubyracer
   turbolinks
   uglifier (>= 1.3.0)
+  underscore-rails
   unicorn
   valle
   yaml_db!
